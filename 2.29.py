@@ -1,0 +1,17 @@
+import math
+
+print("Введите координаты трёх вершин треугольника:")
+x1, y1 = map(float, input("A(x y): ").split())
+x2, y2 = map(float, input("B(x y): ").split())
+x3, y3 = map(float, input("C(x y): ").split())
+
+AB = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+BC = math.sqrt((x3 - x2) ** 2 + (y3 - y2) ** 2)
+CA = math.sqrt((x1 - x3) ** 2 + (y1 - y3) ** 2)
+
+P = AB + BC + CA
+
+S = abs(x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2)) / 2
+
+print(P)
+print(S)
